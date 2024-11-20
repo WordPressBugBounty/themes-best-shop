@@ -9,7 +9,7 @@ get_header(); ?>
 
 <div class="woocommerce-page">
     
-    <div class="content-area">
+    <div class="content-area" id="primary">
          <div class="container">
              <div class="page-grid">
                  

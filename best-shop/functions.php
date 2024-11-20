@@ -898,16 +898,15 @@ global $pagenow;
 
 
   if($pagenow == 'index.php' || $pagenow == 'themes.php'){
+    if ( isset( $_GET['hide_admin_notice'] ) ) {
+          update_option('best_shop_hide_admin_notice', 'nov4-dismiss-notice');
+    } else {
 
-      if ( isset( $_GET['hide_admin_notice'] ) ) {
-            update_option('best_shop_hide_admin_notice', 'oct4-dismiss-notice');
-      } else {
-
-          $best_shop_notice = get_option('best_shop_hide_admin_notice', '');
-          if ($best_shop_notice != 'oct4-dismiss-notice' || $best_shop_notice == '') {	
-             add_action( 'admin_notices', 'best_shop_admin_notice_info' );
-          }
-      }
+        $best_shop_notice = get_option('best_shop_hide_admin_notice', '');
+        if ($best_shop_notice != 'nov4-dismiss-notice' || $best_shop_notice == '') {	
+           add_action( 'admin_notices', 'best_shop_admin_notice_info' );
+        }
+    }
   }
 
   function best_shop_admin_notice_info() {

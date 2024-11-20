@@ -68,7 +68,7 @@ function best_shop_primary_page_header(){
 					<h1 class="page-title">
 						<?php
 						/* translators: %s: search query. */
-						printf( esc_html( '%s', 'best-shop' ), get_search_query() );
+						printf( esc_html__( '%s', 'best-shop' ), get_search_query() );
 						?>
 					</h1>
 				<?php } elseif( is_home() && ! is_front_page() ) { 	?>			

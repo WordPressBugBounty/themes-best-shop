@@ -28,16 +28,24 @@ if ( post_password_required() ) {
 			if ( '1' === $best_shop_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'Comments', 'best-shop' ),
+					esc_html__( 'Comments on: %s', 'best-shop' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s Comment', '%1$s Comments', $best_shop_comment_count, 'comments title', 'best-shop' ) ),
-					number_format_i18n( $best_shop_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
+                printf(
+                    /* translators: 1: comment count number, 2: post title. */
+                    esc_html(
+                        _nx(
+                            '%1$s Comment on %2$s',
+                            '%1$s Comments on %2$s',
+                            $best_shop_comment_count,
+                            'comments title',
+                            'best-shop'
+                        )
+                    ),
+                    number_format_i18n( $best_shop_comment_count ), // Formats the comment count
+                    '<span>' . wp_kses_post( get_the_title() ) . '</span>'
+                );
 			}
 			?>
             
