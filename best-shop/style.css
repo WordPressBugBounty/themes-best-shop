@@ -4,7 +4,7 @@ Theme URI: https://www.gradientthemes.com/product/wordpress-shopping-cart-theme/
 Author: gradientthemes
 Author URI: https://gradientthemes.com/
 Description: Best Shop is a fast, clean, widgetized and modern responsive free WooCommerce WordPress theme. The theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme has built in WooCommerce product widgets like product category lists/grids, product sliders, post sliders, category showcase etc. Therefore you can create product pages easily without referring to complex shortcodes. Best Shop is compatible with YITH WooCommerce Wishlist, YITH WooCommerce Compare, YITH WooCommerce Quick view, WooCommerce Variation Swatches and most of the popular plugins. The theme is SEO friendly, WPML and RTL ready. See documentation:-https://wordpress.gradientthemes.com
-Version: 1.5.1
+Version: 1.5.2
 Requires at least: 4.7
 Tested up to: 6.7
 Requires PHP: 7.0
@@ -6797,6 +6797,29 @@ ul.site-header-cart {
     margin-bottom: 4px;
 }
 
+.woocommerce ul.products li.product .hover-area .yith-wcwl-add-to-wishlist-button {
+    background-color:  var(--gbl-primary-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z'/%3E%3C/svg%3E");
+    font-size: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    border-radius: 30px;
+}
+
+.woocommerce ul.products li.product .hover-area .yith-add-to-wishlist-button-block {
+    margin: 0px auto;
+}
+
+.woocommerce ul.products li.product .hover-area .yith-wcwl-add-to-wishlist-button:hover {
+    background-color:   #312E2EAD;
+}
+
+.yith-wcwl-add-to-wishlist-button:not(.yith-wcwl-add-to-wishlist-button--themed-button) svg.yith-wcwl-add-to-wishlist-button-icon {
+  color: var(--gbl-primary-color);
+}
+
 
 .yith-wcwl-add-button .add_to_wishlist .yith-wcwl-icon::before {
     content: '';
@@ -6834,6 +6857,13 @@ ul.site-header-cart {
         border-radius: 24px;
 }
 
+.yith-add-to-wishlist-button-block.yith-add-to-wishlist-button-block--single {
+    margin-bottom: 12px;
+}
+.yith-add-to-wishlist-button-block.yith-add-to-wishlist-button-block--single svg {
+    display: none;
+}
+
 .woocommerce ul.products li.product .yith-wcwl-wishlistaddedbrowse {
     display: none;
 }
@@ -6867,6 +6897,8 @@ ul.site-header-cart {
     left: 15px;
     display: none;
 }
+
+
 
 .widget_product_tag_cloud .tagcloud a {
     padding: 5px;
