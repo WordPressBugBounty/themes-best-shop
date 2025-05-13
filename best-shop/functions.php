@@ -316,6 +316,8 @@ if ( ! function_exists( 'best_shop_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'best_shop_setup' );
 
+add_filter( 'doing_it_wrong_trigger_error', '__return_false' );
+
 if( ! function_exists( 'best_shop_content_width' ) ) :
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
