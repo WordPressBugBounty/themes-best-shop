@@ -4,9 +4,9 @@ Theme URI: https://www.gradientthemes.com/product/wordpress-shopping-cart-theme/
 Author: gradientthemes
 Author URI: https://gradientthemes.com/
 Description: Best Shop is a fast, clean, widgetized and modern responsive free WooCommerce WordPress theme. The theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme has built in WooCommerce product widgets like product category lists/grids, product sliders, post sliders, category showcase etc. Therefore you can create product pages easily without referring to complex shortcodes. Best Shop is compatible with YITH WooCommerce Wishlist, YITH WooCommerce Compare, YITH WooCommerce Quick view, WooCommerce Variation Swatches and most of the popular plugins. The theme is SEO friendly, WPML and RTL ready. See documentation:-https://wordpress.gradientthemes.com
-Version: 1.5.3
+Version: 1.5.4
 Requires at least: 4.7
-Tested up to: 6.7
+Tested up to: 6.8.2
 Requires PHP: 7.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -5146,9 +5146,6 @@ li .star-rating > span::before {
     width: 50%;
     padding-left: 20px;
 }
-.woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row label {
-    font-size: 0.833em;
-}
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row input {
     width: 100%;
     font-size: 0.833em;
@@ -5159,23 +5156,14 @@ li .star-rating > span::before {
     border-radius: 3px;
 }
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row .select2-container--default .select2-selection--single {
-    height: 50px;
+   
     background-color: #f9f9f9;
     border: 0;
 }
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 50px;
-    font-size: 00.833em;
+    line-height: 35px;    
 }
-.woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top: 13px;
-}
-.woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-1 .woocommerce-billing-fields__field-wrapper .form-row ::placeholder {
-    font-size: 1em;
-}
-.woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-2 .woocommerce-additional-fields .form-row label {
-    font-size: 0.833em;
-}
+
 .woocommerce-checkout .checkout.woocommerce-checkout #customer_details .col-2 .woocommerce-additional-fields .form-row .woocommerce-input-wrapper #order_comments {
     height: 125px;
     width: 100%;
