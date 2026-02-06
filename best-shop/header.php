@@ -159,7 +159,7 @@ do_action( 'best_shop_doctype' );
 						</div>
                         <?php } else { ?>
                         <div class="banner header-right media-image-news">
-                            <?php the_widget( 'WP_Widget_Media_Image', 'url='.best_shop_get_setting('header_banner_img')); ?>
+                            <?php echo '<img src='.esc_url( best_shop_get_setting('header_banner_img')).'>'; ?>
                             <?php echo wp_kses_post(do_shortcode(best_shop_get_setting('header_shortcode'))); ?>
                         </div>
                         <?php } ?>

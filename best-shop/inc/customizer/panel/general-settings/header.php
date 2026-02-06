@@ -18,7 +18,7 @@ function best_shop_customize_register_header( $wp_customize ) {
               ) 
           );
           $wp_customize->add_control( new best_shop_Notice_Control( $wp_customize, 'header_lbl_1', array(
-              'label'	    => esc_html__( 'More options in Pro version: 1. WooCommerce bar background color/ Title change 2. Edit product category title 3. Disable menu search / cart icon 4. Enable/Disable wishlist,compare, my account icons ', 'best-shop' ),
+              'label'	    => esc_html__( 'More options in Pro version: 1. WooCommerce options bar background color/ Title change 2. Edit product category title 3. Disable menu search / cart icon 4. Enable/Disable wishlist,compare, my account icons ', 'best-shop' ),
               'section' => 'social_settings',
               'settings' => 'header_lbl_1',
           )));
@@ -76,7 +76,7 @@ function best_shop_customize_register_header( $wp_customize ) {
     
 
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'woo_bar_color', array(
-        'label'	    => esc_html__( 'WooCommerce Bar Text Color', 'best-shop' ),
+        'label'	    => esc_html__( 'WooCommerce Options Bar Text Color', 'best-shop' ),
         'section' => 'social_settings',
         'settings' => 'woo_bar_color',
     ))); 

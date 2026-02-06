@@ -4,9 +4,9 @@ Theme URI: https://www.gradientthemes.com/product/wordpress-shopping-cart-theme/
 Author: gradientthemes
 Author URI: https://gradientthemes.com/
 Description: Best Shop is a fast, clean, widgetized and modern responsive free WooCommerce WordPress theme. The theme supports popular page builders like Elementor, KingComposer, Beaver Builder, SiteOrigin, Thrive Architect, Divi, Brizy, Visual Composer, etc. The theme has built in WooCommerce product widgets like product category lists/grids, product sliders, post sliders, category showcase etc. Therefore you can create product pages easily without referring to complex shortcodes. Best Shop is compatible with YITH WooCommerce Wishlist, YITH WooCommerce Compare, YITH WooCommerce Quick view, WooCommerce Variation Swatches and most of the popular plugins. The theme is SEO friendly, WPML and RTL ready. See documentation:-https://wordpress.gradientthemes.com
-Version: 1.5.4
+Version: 1.5.9
 Requires at least: 4.7
-Tested up to: 6.8.2
+Tested up to: 6.8.3
 Requires PHP: 7.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -6519,6 +6519,7 @@ li .star-rating > span::before {
     margin-left: 15px;
     width: 50%;
     border-radius: 24px;
+    border: 1px solid #f3f1f1;
 }
 
 input.header-search-input {
@@ -6782,7 +6783,7 @@ ul.site-header-cart {
 .products > .product .hover-area .yith-wcwl-add-to-wishlist {
     margin-top: 0px;
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .woocommerce ul.products li.product .hover-area .yith-wcwl-add-to-wishlist-button {
@@ -6824,8 +6825,31 @@ ul.site-header-cart {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z'/%3E%3C/svg%3E");
         background-position: center center;
         background-repeat: no-repeat;
-        padding: 4px 17px;
-        border-radius: 24px;
+        padding: 3px 0px;
+        border-radius: 50%;
+}
+
+.yith-wcwl-add-to-wishlist svg.yith-wcwl-icon-svg, .yith-wcwl-add-to-wishlist .add_to_wishlist img {
+  height: auto;
+  width: 27px !important;
+  fill: transparent !important;
+}
+
+.yith-wcwl-add-to-wishlist svg.yith-wcwl-icon-svg {
+	color: var(--add-to-wishlist-icon-color, #9f727200);
+}
+
+/* shop page wishlist button fix */
+.summary .yith-wcwl-add-button a {
+	padding: .500em 1em;
+}
+
+.summary .yith-wcwl-add-button a .yith-wcwl-icon-svg {
+	display:none;
+}
+
+.summary .yith-wcwl-add-to-wishlist .yith-wcwl-add-button {
+	display: initial;
 }
 
 .woocommerce ul.products li.product a.add_to_wishlist:hover{
@@ -8156,4 +8180,11 @@ body.aft-default-mode .aft-popular-taxonomies-lists{background: rgba(0,0,0,0.05)
 
 .products > .product .hover-area .yith-wcwl-add-to-wishlist.exists {
 	display:none;
+}
+
+/* WooCommerce Product Tag Cloud – uniform size */
+.widget_product_tag_cloud a {
+  font-size: 15px !important;
+  line-height: 1.6;
+  margin-bottom: 5px;
 }

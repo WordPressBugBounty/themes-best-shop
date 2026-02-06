@@ -62,8 +62,9 @@ add_action( 'customize_controls_enqueue_scripts', 'best_shop_customize_script' )
 
 
 //Theme Options
-require get_template_directory() . '/inc/customizer/panel/general-settings.php';
 
+require get_template_directory() . '/inc/customizer/panel/general-settings/block.php';
+require get_template_directory() . '/inc/customizer/panel/general-settings.php';
 require get_template_directory() . '/inc/customizer/panel/general-settings/contact.php';
 require get_template_directory() . '/inc/customizer/panel/general-settings/header-top.php';
 require get_template_directory() . '/inc/customizer/panel/general-settings/header.php';
