@@ -597,28 +597,6 @@ require get_template_directory() . '/inc/widgets/social.php';
 require get_template_directory() . '/inc/widgets/countdown-timer.php';
 
 /**
- * News / Post
- */
-//require get_template_directory() . '/inc/widgets/news.php';
-
-/**
- * News / Post
- */
-//require get_template_directory() . '/inc/widgets/author.php';
-
-
-/**
- * News Tags
- */
-//require get_template_directory() . '/inc/widgets/news-tags.php';
-
-/**
- * News Marquee
- */
-//require get_template_directory() . '/inc/widgets/news-marquee.php';
-
-
-/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
@@ -783,11 +761,11 @@ global $pagenow;
 
 if($pagenow == 'index.php' || $pagenow == 'themes.php'){
   if ( isset( $_GET['hide_admin_notice'] ) ) {
-        update_option('best_shop_hide_admin_notice', 'augs5-dismiss-notice');
+        update_option('best_shop_hide_admin_notice', 'apri6-dismiss-notice');
   } else {
 
       $best_shop_notice = get_option('best_shop_hide_admin_notice', '');
-      if ($best_shop_notice != 'augs5-dismiss-notice' || $best_shop_notice == '') {	
+      if ($best_shop_notice != 'apri6-dismiss-notice' || $best_shop_notice == '') {	
          add_action( 'admin_notices', 'best_shop_admin_notice_info' );
       }
   }
