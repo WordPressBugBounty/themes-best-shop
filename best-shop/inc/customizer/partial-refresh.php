@@ -110,9 +110,9 @@ function best_shop_get_footer_copyright(){
         } else{
             if($copyright === ''){
             //free text domain
-                echo ' <a href="https://gradientthemes.com">' . esc_html__('A free theme by Gradient Themes ©' , 'best-shop') . '</a> ';
+                echo ' <a href="https://gradientthemes.com">' . esc_html__('A theme by Gradient Themes ©' , 'best-shop') . '</a> ';
             } else{
-                echo ' <a href="https://gradientthemes.com">' . esc_html(best_shop_get_setting( 'footer_copyright' )).esc_html__(' - Free theme by Gradient Themes', 'best-shop') . '</a> ';
+                echo ' <a href="https://gradientthemes.com">' . esc_html(best_shop_get_setting( 'footer_copyright' )).esc_html__(' - A theme by Gradient Themes', 'best-shop') . '</a> ';
             }
         }
     

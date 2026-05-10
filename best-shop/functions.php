@@ -68,6 +68,8 @@ function best_shop_custom_css() {
         .site-footer .footer-overlay {
             background-color:<?php echo esc_attr(best_shop_get_setting('footer_color')); ?>;
         }
+        
+        .star-rating .star.star-empty::before {  content: "\f155" !important; }
                 
 	</style>
 <?php
@@ -281,35 +283,44 @@ add_action('elementor/editor/before_enqueue_scripts', function() {
 if( ! function_exists( 'best_shop_google_fonts_url' ) ) :
 /**
  * Register google font.
- */
+ */  		
 function best_shop_google_fonts_url() {
-    $fonts_url = '';
 
-  		/*
+    $fonts_url = '';
+    
+    /*
 		 * Translators: If there are characters in your language that are not
 		 * supported by "Open Sans", sans-serif;, translate this to 'off'. Do not translate
 		 * into your own language.
 		 */
-		$typography = _x( 'on', 'Open Sans font: on or off', 'best-shop' ); 
-	
-		if ( 'off' !== $typography ) {
-			$font_families = array();
-			
-			$font_families[] = best_shop_get_setting('heading_font').':300,300i,400,400i,700,700i';
-			$font_families[] = best_shop_get_setting('body_font').':300,300i,400,400i,500,500i,600,600i';
-			
-	 
-			$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-			);
-			
-			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-			
-			
-		} 
 
-    return esc_url( $fonts_url );
+    $typography = _x( 'on', 'Google font: on or off', 'best-shop' );
+
+    if ( 'off' !== $typography ) {
+
+        // Remove fallback fonts if saved in settings
+        $heading_font = str_replace( array( ', sans-serif', ',sans-serif' ), '', best_shop_get_setting( 'heading_font' ) );
+        
+        $body_font = str_replace( array( ', sans-serif', ',sans-serif' ), '', best_shop_get_setting( 'body_font' ) );
+
+        $font_families = array();
+
+        $font_families[] = $heading_font . ':300,400,500,600,700';
+        $font_families[] = $body_font . ':300,400,500,600,700';
+
+        $query_args = array(
+            'family'  => implode( '|', $font_families ),
+            'display' => 'swap',
+            'subset'  => 'latin,latin-ext',
+        );
+
+        $fonts_url = add_query_arg(
+            $query_args,
+            'https://fonts.googleapis.com/css'
+        );
+    }
+
+    return esc_url_raw( $fonts_url );
 }
 endif;
 
